@@ -39,8 +39,24 @@
         li.textContent = taskText;
          document.getElementById("taskList").appendChild(li);
         console.log("addTaskItem() called -> ",taskText,Date());
+        
+        const deleteBtn = cretedetebutton(li);
+        li.appendChild(deleteBtn);
     }
+function cretedeletebutton(li){
+  const deletebtn = document.createElement("button"); 
+  deleteBtn.textContent = " X ";
+  deleteBtn.className = "delete-Btn";
+  deleteBtn.style.marginLeft = "8px";
+  deleteBtn.onclick = () => handleDeleteclick(li);
 
+  console.log("createDeletebutton() called-> ",li.textContent);
+  return (deleteBtn);
+}
+function handletaskclick(li){
+    console.log("handlDeleteclick()-> ", li.textcontent.replace(" X ","").trim(),Date());
+    li.remove();
+}
 </script>
 </body>
 </html>
