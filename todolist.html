@@ -6,7 +6,7 @@
     <title>To do list</title>
 </head>
 <body>
-    <h1>To do list</h1>
+    <h1>Mga Utangan</h1>
     <input type="text"
            id="taskInput"
            placeholder="Add a task..."
@@ -40,10 +40,15 @@
          document.getElementById("taskList").appendChild(li);
         console.log("addTaskItem() called -> ",taskText,Date());
         
-        const deleteBtn = cretedetebutton(li);
+        const deleteBtn = creteDetebutton(li);
         li.appendChild(deleteBtn);
+
+        const taskSpan = document.createElement("span");
+        taskSpan.textContent = taskText;
+        const editBtn = createEditButton(li, taskSpan);
+        li.appendChild(editBtn);
     }
-function cretedeletebutton(li){
+function creteDeletebutton(li){
   const deletebtn = document.createElement("button"); 
   deleteBtn.textContent = " X ";
   deleteBtn.className = "delete-Btn";
@@ -54,9 +59,33 @@ function cretedeletebutton(li){
   return (deleteBtn);
 }
 function handletaskclick(li){
-    console.log("handlDeleteclick()-> ", li.textcontent.replace(" X ","").trim(),Date());
+    console.log("handlDeleteClick()-> ", li.textcontent.replace(" X ","").trim(),Date());
     li.remove();
 }
+function createEditButton(li,taskSpan){
+    const editBtn = document.createElement("button");
+    editBtn.textContent = " Edit ";
+    editBtn.className = "edit-Btn";
+    editBtn.style.marginLeft = "8px";
+    editBtn.onclick = () => handleEditClick(li,);
+
+    console.log("createEditButton() called-> ", taskSpan.textContent);
+    return (editBtn);
+}
+
+function handleEditClick(li){
+    const currentText = li.firstChild.textContent.trim();
+    console.log("handleEditClick() -> current:", currentText, Date());
+}
+    const newText = prompt("Edit your task", currentText);
+    if(nexText !== null && newText.trim() !== ""){
+    li.firstChild.textContent = newText.trim();
+    console.log("handleEditClick() -> updated to:", newText.trim(), Date());
+} else{
+    console.log("handleEditClick() -> no changes made");
+
+}
+
 </script>
 </body>
 </html>
