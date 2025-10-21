@@ -18,11 +18,11 @@
         height: 500px; 
     }
     .popup-image{
-      max-width:200px;
-        height:auto;
+        max-width: 200px;
+        height: auto;
+        object-fit: fill;
     }
 </style>
-
     
 </head>
 <body>
@@ -44,26 +44,25 @@
             .then(response => response.json())
             .then(data => {
                 data.forEach(pin=>{
+
                     const marker = L.marker([pin.lat, pin.lng]).addTo(map);
-                    
+
                     const img = `<img src='${pin.img}' class="popup-image">`;
                     marker.bindPopup(`
-                    ${img} <br>
-                    <b>${pin.title}<br>
-                   ${pin.description}
-                   ');
+                        ${img} <br>
+                        <b>${pin.title}<br>
+                        ${pin.description}
+                    `);
 
-                  console.log(`${pin.name} Loaded ` +Date());
+                    console.log(`${pin.name} Loaded ` + Date());
                 });
             })
             .catch(err=>console.error('Error loading JSON:',err));
-
     }
 
     document.addEventListener('DOMContentLoaded',()=>{
         initMap('maps.json');
     })
-
 
 </script>
 </html>

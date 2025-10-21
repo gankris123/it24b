@@ -1,11 +1,18 @@
 [
     {
-        "name":"ICS laboratory 1",
+        "name":"ICS Laboratory 1",
         "title":"ICS Lab 1",
-        "description":"This is the ICS laboratory 1, yipee",
-        "img":"https://media.istockphoto.com/id/619632580/photo/three-penguin-chicks.jpg?s=612x612&w=0&k=20&c=qAt67W9mm5NMpjj8xePfdAz7kRzaMSkDZKsuVwDjQtM=",
+        "description":"This is the ICS Laboratory 1, yipee",
+        "img":"https://pbs.twimg.com/media/EKEopCTWkAE1ToO.jpg",
         "lat":8.3593,
         "lng":124.8691
-    
+    },
+    {
+        "name":"Comfort Room 1",
+        "title":"CR nganiii, arayyy kooo",
+        "description":"",
+        "img":"https://i.pinimg.com/564x/a2/b9/6e/a2b96e2b760e76db66fdb9eeffb8f01f.jpg",
+        "lat":8.359009695166359,
+        "lng":124.86911436078864
     }
 ]
