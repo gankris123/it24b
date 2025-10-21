@@ -1,8 +1,11 @@
 [
     {
         "name":"ICS laboratory 1",
+        "title":"ICS Lab 1",
+        "description":"This is the ICS laboratory 1, yipee",
+        "img":"https://media.istockphoto.com/id/619632580/photo/three-penguin-chicks.jpg?s=612x612&w=0&k=20&c=qAt67W9mm5NMpjj8xePfdAz7kRzaMSkDZKsuVwDjQtM=",
         "lat":8.3593,
-        "lng":124.8691,
-        "description":"This is the ICS laboratory 1, yipee"
+        "lng":124.8691
+    
     }
 ]
