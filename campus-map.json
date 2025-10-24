@@ -5,8 +5,8 @@
         "description":"This is the ICS Laboratory 1, yipee",
         "img":"https://pbs.twimg.com/media/EKEopCTWkAE1ToO.jpg",
         "lat":8.3593,
-        "lng":124.8691
-    
+        "lng":124.8691,
+        "locationType": "Laboratory"
     },
     {
         "name":"Comfort Room 1",
